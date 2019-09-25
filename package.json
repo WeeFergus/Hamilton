@@ -1,0 +1,24 @@
+{
+  "name": "hamilton",
+  "themeName": "hamilton",
+  "version": "0.1.0",
+  "description": "Custom designed theme by Pete Hudack, LLC",
+  "author": "pete <petehudack@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-notify": "^0.4.5",
+    "grunt-sass": "^1.0.0",
+    "grunt-shell": "^1.2.1",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.2.0",
+    "time-grunt": "^1.2.1"
+  }
+}

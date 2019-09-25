@@ -1,0 +1,126 @@
+// Globals
+@include selection {
+	background-color: $secondaryColor;
+	color: #FFF;
+}
+
+@include placeholder {
+	color: #6D6E70;
+    font-weight: lighter;
+}
+
+input,
+textarea {
+	@include transition(all 0.1s ease-in-out);
+	&:focus {
+		outline: 2px solid $primaryColor;
+	}
+}
+
+body {
+	font-size: $em-base;
+	font-family: $primaryFont;
+	line-height: em(26);
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  	font-family: $primaryFont;
+}
+
+h1 {
+	font-size: em(48px);
+	letter-spacing: 2.5px;
+	color: $primaryColor;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: em(36px);
+	color: $secondaryColor;
+}
+
+h3 {
+	font-size: em(24px);
+	font-weight: normal;
+	color: $primaryColor;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: em(21px);
+    font-weight: normal;
+	color: $secondaryColor;
+	text-transform: uppercase;
+}
+
+h5 {
+	@extend h4;
+	color: $primaryColor;
+	text-transform: none;
+}
+
+h6 {
+	@extend h5;
+	color: $secondaryColor;
+}
+
+a {
+	@include general-transition;
+	text-decoration: none;
+	color: $primaryColor;
+	&:hover {
+		color: $secondaryColor;
+	}
+}
+
+ul {
+	padding-left: 20px;
+}
+
+ol {
+	padding-left: 23px;
+}
+
+b,
+strong {
+	font-family: $primaryFont;
+}
+
+.entry-content,
+footer .menu,
+.copyright,
+.tower-wrap {
+	@include container();
+}
+
+.entry-title {
+	margin-top: 100px;
+}
+
+.entry-meta {
+    color: #BBBDBF;
+}
+
+p,
+li  {
+	letter-spacing: 1.2px;
+}
+
+section {
+	@include outer-container(100%);
+}
+
+.xdebug-var-dump {
+	text-align: left;
+	background: white;
+	padding: 10px;
+	border: 5px solid blueviolet;
+}
+

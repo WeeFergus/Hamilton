@@ -1,0 +1,45 @@
+// For Bourbon settings
+$em-base: 16px;
+
+// Grid Settings
+$visual-grid: false;
+
+/// Sets the visual grid color. Set with `!global` flag.
+$visual-grid-color: #568F90;
+
+/// Sets the `z-index` property of the visual grid. Can be `back` (behind content) or `front` (in front of content). Set with `!global` flag.
+$visual-grid-index: back;
+
+/// Sets the opacity property of the visual grid. Set with `!global` flag.
+$visual-grid-opacity: 0.4;
+
+$visual-grid-breakpoints: () !default;
+
+// Change the grid settings
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1200px;
+$inner-width: 960px;
+
+// Variables
+$primaryColor: #c3d500;
+$secondaryColor: #58595B;
+
+$baseBorderWidth:  2px;
+
+$primaryFont: 'Roboto Condensed', sans-serif;
+
+$laptopL: new-breakpoint(max-width 1440px); // large laptops
+$laptop: new-breakpoint(max-width 1024px); // laptop
+$tablet: new-breakpoint(max-width 768px); // tablet
+$mobileL: new-breakpoint(max-width 425px); // small phone
+$mobileM: new-breakpoint(max-width 375px); // small phone
+$mobileS: new-breakpoint(max-width 320px); // small phone
+
+$facebookColor: #3A5A98;
+$twitterColor: #5FA8DC;
+$linkedInColor: #0078B5;
+$instagramColor: #833ab4;
+$social-icon-width: 30px;
+$social-icon-height: 30px;

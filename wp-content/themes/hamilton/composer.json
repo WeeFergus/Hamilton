@@ -1,0 +1,15 @@
+{
+  "name": "towermarketing",
+  "description": "A custom Genesis child theme by Tower Marketing.",
+  "type": "wordpress-theme",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "towermarketing",
+      "email": "dev@towermarketing.net"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"Tower\\": "lib/"}
+  }
+}
