@@ -23,14 +23,17 @@ $max-width: 1200px;
 $inner-width: 960px;
 
 // Variables
-$primaryColor: #c3d500;
-$secondaryColor: #58595B;
+$primaryColor: #40403e;
+$grey: #40403e;
+$secondaryColor: #ee1c25;
+$red: #ee1c25;
 
 $baseBorderWidth:  2px;
 
-$primaryFont: 'Roboto Condensed', sans-serif;
+$primaryFont: 'Poppins', sans-serif;
+$poppins: 'Poppins', sans-serif;
 
-$laptopL: new-breakpoint(max-width 1440px); // large laptops
+$laptopL: new-breakpoint(max-width 1320px); // large laptops
 $laptop: new-breakpoint(max-width 1024px); // laptop
 $tablet: new-breakpoint(max-width 768px); // tablet
 $mobileL: new-breakpoint(max-width 425px); // small phone

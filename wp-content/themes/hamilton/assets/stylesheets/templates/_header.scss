@@ -1,1 +1,127 @@
 //Header
+
+#superheader {
+	min-height: 55px;
+	width: 100%;
+
+	.content-wrap {
+		@include outer-container();
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(space-between);
+
+		@include media($laptopL) {
+			margin-left: 4%;
+			margin-right: 4%;
+			transition: all .2 ease;
+		}
+
+		.business-info {
+			float: left;
+			width: 65%;
+			color: rgba(0,0,0,0.8);
+			font-size: 14px;
+			letter-spacing: 0;
+
+			i {
+				color: $red;
+				display: inline-block;
+				margin-right: 2px;
+			}
+
+			a {
+				color: rgba(0,0,0,0.8);
+				font-size: 14px;
+				letter-spacing: 0;
+				margin-right: 15px;
+				display: inline-block;
+				@include general-transition();
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+
+		.menu-superheader-menu-container {
+			float: right;
+			width: 35%;
+
+			ul#menu-superheader-menu {
+				list-style: none;
+
+				li {
+					text-transform: uppercase;
+					text-align: right;
+
+					a {
+						font-size: 14px;
+						letter-spacing: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+#header {
+	//min-height: 95px;
+	border-top: 4px solid $red;
+	background: $grey;
+	width: 100%;
+	padding: 12px 0;
+
+	.content-wrap {
+		@include outer-container();
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(space-between);
+		position: relative;
+
+		@include media($laptopL) {
+			margin-left: 4%;
+			margin-right: 4%;
+			transition: all .2 ease;
+		}
+
+		#logo {
+			position: absolute;
+			width: 115px;
+			height: 100px;
+			left: 0;
+			top: 0;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.menu-primary-navigation-container {
+			text-align: right;
+			width: 100%;
+
+			ul#menu-primary-navigation {
+			    text-align: right;
+			    float: right;
+			    list-style: none;
+
+			    li {
+				    display: inline;
+
+				    a {
+					    text-transform: uppercase;
+						color: #fff;
+						font-size: 14px;
+						padding-left: 20px;
+						@include general-transition();
+
+						&:hover {
+							color: $red;
+						}
+				    }
+			    }
+			}
+		}
+	}
+}

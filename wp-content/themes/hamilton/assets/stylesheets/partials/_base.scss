@@ -35,7 +35,6 @@ h6 {
 
 h1 {
 	font-size: em(48px);
-	letter-spacing: 2.5px;
 	color: $primaryColor;
 	font-weight: lighter;
 	text-transform: uppercase;
@@ -110,7 +109,7 @@ footer .menu,
 
 p,
 li  {
-	letter-spacing: 1.2px;
+	letter-spacing: 0;
 }
 
 section {

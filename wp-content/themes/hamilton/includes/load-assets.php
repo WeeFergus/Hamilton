@@ -10,4 +10,9 @@ function hamilton_enqueue_scripts()
     wp_enqueue_style( 'hamilton-theme-css', $assets_dir . '/dist/styles.min.css', array(), $version );
 
     wp_enqueue_script( 'hamilton-theme-js', $assets_dir . '/dist/javascript.min.js', array('jquery'), $version, true );
-}
+
+    wp_enqueue_style('add-fontawesome', 'https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+
+    wp_enqueue_style( 'poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700,900&display=swap',false );
+
+ }

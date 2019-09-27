@@ -5,7 +5,7 @@ if (!defined( 'HAMILTON_THEME_HEX')) {
 	define( 'HAMILTON_THEME_HEX', "#82bd41" );
 }
 
-add_action( 'genesis_setup', 'tower_load_include_files', 15 );
+add_action( 'genesis_setup', 'hamilton_load_include_files', 15 );
 
 function hamilton_load_include_files()
 {
