@@ -1,1 +1,80 @@
 //Footer
+
+#footer-main {
+	background: $grey;
+	padding-top: 90px;
+
+	.content-wrap {
+		color: #fff;
+		min-height: 325px;
+		@include outer-container();
+		@include display(flex);
+		@include align-items(flex-start);
+		min-height: 290px;
+		@include justify-content(flex-start);
+
+		@include media($laptopL) {
+			margin-left: 4%;
+			margin-right: 4%;
+			transition: all .2 ease;
+			border: 1px solid white;
+		}
+
+		p {
+			color: #fff;
+			@include flex(0 1 250px);
+			margin-right: 20px;
+			margin-top: 0;
+		}
+
+		a {
+			color: #fff;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+		.logo {
+			@include flex(0 0 100px);
+			margin-right: 20px;
+		}
+	}
+}
+
+#subfooter {
+	background: #000;
+
+	.content-wrap {
+		min-height: 325px;
+		@include outer-container();
+		@include display(flex);
+		@include align-items(center);
+		min-height: 118px;
+
+		@include media($laptopL) {
+			margin-left: 4%;
+			margin-right: 4%;
+			transition: all .2 ease;
+		}
+
+		p {
+			color: #fff;
+			@include flex(0 1 50%);
+		}
+
+		ul {
+			@include flex(0 1 50%);
+			text-align: right;
+
+			li {
+				display: inline;
+
+				a {
+					color: #fff;
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}

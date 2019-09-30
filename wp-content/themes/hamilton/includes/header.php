@@ -26,7 +26,7 @@ function haminc_superheader() { ?>
 		<div class="content-wrap">
 			<div class="business-info">
 
-				<i class="fas fa-phone"></i> <a href="tel:1.<?php the_field('phone','options')?>"><?php the_field('phone','options')?></a>
+				<i class="fas fa-phone"></i> <a href="tel:1.<?php the_field('pa_local_phone','options')?>"><?php the_field('pa_local_phone','options')?></a>
 				<i class="fas fa-at"></i> <a href="mailto:<?php the_field('email','options')?>" target="_blank"><?php the_field('email','options')?></a>
 
 				<i class="far fa-clock"></i> <?php the_field('hours','options')?>
@@ -41,7 +41,7 @@ function haminc_logo_nav() { ?>
 	<div id="header">
 		<div class="content-wrap">
 			<div id="logo">
-				<a href="index.php"><img src="/hamilton/wp-content/themes/hamilton/assets/images/haminc-logo.png" alt="Hamilton Equipment"/></a>
+				<a href="<?php echo get_option("siteurl");?>"><img src="/hamilton/wp-content/themes/hamilton/assets/images/haminc-logo.png" alt="Hamilton Equipment"/></a>
 			</div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</div>

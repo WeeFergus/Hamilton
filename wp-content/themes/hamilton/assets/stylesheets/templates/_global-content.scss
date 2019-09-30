@@ -44,3 +44,42 @@ section,
 		transition: all .2 ease;
 	}
 }
+
+// Forms
+
+input[type=text] {
+	background: #f2f2f2;
+	border: none;
+
+	&:focus {
+		border-color: #f2f2f2!important;
+	}
+}
+
+.gform_wrapper input:not([type=radio]):not([type=radio]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.ginput_container_textarea {
+	border-radius: 30px;
+	-webkit-appearance: none;
+	background: #f2f2f2;
+	padding: 12px!important;
+	margin-bottom: 10px;
+	border: 1px solid #999;
+}
+
+textarea.medium {
+	background: #f2f2f2;
+	border: none;
+
+	&:focus {
+		border-color: #f2f2f2!important;
+	}
+}
+
+.gform_wrapper label.gfield_label,
+.gform_wrapper legend.gfield_label {
+	font-size: 14px!important;
+	letter-spacing: 0;
+	font-weight: 300!important;
+	margin-left: 15px;
+}
+
