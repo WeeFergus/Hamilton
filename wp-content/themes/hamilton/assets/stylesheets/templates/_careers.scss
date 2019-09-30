@@ -1,0 +1,24 @@
+// Careers
+
+section.careers {
+	@include display(flex);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+	min-height:300px;
+
+	.job-post {
+		@include flex(0 0 47%);
+		border: 1px solid #999;
+		padding: 3%;
+		text-align: left;
+		margin-bottom: 40px;
+
+		@include media($tablet) {
+			@include flex(0 0 100%);
+		}
+
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+// Home
+
+#hero {
+	width: 100%;
+	min-height: 760px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	.site-container {
+		@include outer-container();
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(flex-start);
+		min-height: 760px;
+
+		@include media($laptopL) {
+			margin-left: 4%;
+			margin-right: 4%;
+			transition: all .2 ease;
+		}
+
+		h1 {
+			color: #fff;
+			font-size: 4em;
+			font-weight: 300;
+			font-family: $poppins;
+			line-height: 1;
+
+			span {
+				font-weight: 900;
+			}
+		}
+	}
+}

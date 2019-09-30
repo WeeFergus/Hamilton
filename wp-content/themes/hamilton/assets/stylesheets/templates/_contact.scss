@@ -1,0 +1,16 @@
+//Contact
+
+section.contact {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+
+	.form {
+		@include flex(0 1 70%);
+	}
+
+	.side {
+		@include flex(0 0 25%);
+	}
+}
+
