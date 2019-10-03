@@ -1,0 +1,49 @@
+#browse-products {
+	margin: 0 2%;
+	background-size: cover;
+	background-position: center center;
+	width: 96%;
+    padding: 18% 4%;
+    max-width: 1600px;
+
+    h3 {
+		color: #fff;
+		font-size: 3em;
+		font-weight: 300;
+		font-family: $poppins;
+		line-height: .9;
+
+		span {
+			font-weight: 900;
+		}
+	}
+}
+
+#view-demos {
+	margin: 60px 2% 30px 2%;
+	background-size: cover;
+	background-position: center center;
+	width: 96%;
+    @include display(flex);
+    @include justify-content(flex-end);
+    padding: 13% 4%;
+    max-width: 1600px;
+
+    .text-wrap {
+		@include flex(0 1 500px);
+
+	    h3 {
+			color: #000;
+			font-size: 3em;
+			font-weight: 300;
+			font-family: $poppins;
+			line-height: .9;
+			margin-bottom: 0;
+
+			span {
+				font-weight: 900;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,19 @@
+section.about {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	margin-bottom: 60px;
+
+	.left {
+		@include flex(0 1 65%);
+	}
+
+	.right {
+		@include flex(0 0 30%);
+
+		img {
+			margin: 10px;
+			border: 1px solid #999;
+		}
+	}
+}
