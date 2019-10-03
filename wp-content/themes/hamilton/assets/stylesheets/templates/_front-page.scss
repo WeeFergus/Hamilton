@@ -33,3 +33,60 @@
 		}
 	}
 }
+
+#about {
+	margin: 0 2% 60px 2%;
+	background-size: cover;
+	width: 96%;
+	max-width: 1600px;
+	padding: 5%;
+	background: url('/hamilton/wp-content/themes/hamilton/assets/images/wood.jpg') center center no-repeat;
+
+	.about-container {
+		@include outer-container();
+		@include display(flex);
+		@include justify-content(space-between);
+
+		@include media($laptopL) {
+			margin-left: 4%;
+			margin-right: 4%;
+			transition: all .2 ease;
+		}
+
+		.wheat {
+			@include flex(0 1 31%);
+			height: 200px;
+			color: white;
+			@include display(flex);
+			@include justify-content(space-between);
+
+			img {
+			}
+
+			div {
+
+				h3 {
+					color: #fff;
+					font-size: 2.8em;
+					font-weight: 300;
+					font-family: $poppins;
+					line-height: .9;
+					margin-bottom: 0;
+					margin-top: 5px;
+
+					span {
+						font-weight: 900;
+					}
+				}
+			}
+		}
+
+		p {
+			@include flex(0 1 30%);
+			height: 200px;
+			color: #fff;
+			margin-top: 0;
+		}
+	}
+}
+
