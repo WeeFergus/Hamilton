@@ -15,4 +15,8 @@ function hamilton_enqueue_scripts()
 
     wp_enqueue_style( 'poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700,900&display=swap',false );
 
- }
+	wp_enqueue_script( 'slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('jquery'), time(), true );
+
+	wp_enqueue_style( 'slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' );
+
+}

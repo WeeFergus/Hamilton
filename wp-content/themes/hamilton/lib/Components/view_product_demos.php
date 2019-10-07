@@ -12,7 +12,7 @@ class view_product_demos
 		echo '<div class="text-wrap">';
 			echo '<h3>' . get_field('demo_title', 'options') . '</h3>';
 			echo '<p>' . get_field('demo_content', 'options') . '</p>';
-			echo '<a href="/product-demos/" class="button">';
+			echo '<a href="/hamilton/product-demos/" class="button">';
 				echo the_field('demo_button_text', 'options');
 			echo '</a>';
 		echo '</div>';

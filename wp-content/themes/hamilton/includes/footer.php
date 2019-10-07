@@ -26,6 +26,13 @@ function haminc_do_footer() {?>
 			Toll-Free: <?php the_field('va_toll_free','options');?><br />
 			Fax: <?php the_field('va_fax','options');?><br />
 			</p>
+			<div class="newsletter">
+				<div>
+				<p><strong>GET OUR NEWSLETTER</strong><br />
+					You'll receive exclusive news about shows, new products and special promotional deals.
+				</p>
+				</div>
+			</div>
 		</div>
 	</div>
 

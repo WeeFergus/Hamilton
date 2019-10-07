@@ -39,6 +39,7 @@ $tablet: new-breakpoint(max-width 768px); // tablet
 $mobileL: new-breakpoint(max-width 425px); // small phone
 $mobileM: new-breakpoint(max-width 375px); // small phone
 $mobileS: new-breakpoint(max-width 320px); // small phone
+$burgertime: new-breakpoint(max-width 860px);
 
 $facebookColor: #3A5A98;
 $twitterColor: #5FA8DC;

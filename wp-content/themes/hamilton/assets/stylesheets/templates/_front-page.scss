@@ -2,7 +2,6 @@
 
 #hero {
 	width: 100%;
-	min-height: 760px;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -18,6 +17,7 @@
 			margin-left: 4%;
 			margin-right: 4%;
 			transition: all .2 ease;
+			min-height: 570px;
 		}
 
 		h1 {
@@ -30,35 +30,222 @@
 			span {
 				font-weight: 900;
 			}
+
+			@include media($laptop) {
+				font-size: 3em;
+			}
+		}
+	}
+}
+
+#partners {
+	margin: 100px auto 160px auto;
+	width: 96%;
+	max-width: 1000px;
+	text-align: center;
+
+	h3 {
+		color: #000;
+		font-size: 40px;
+		font-weight: 300;
+		font-family: $poppins;
+		line-height: .9;
+		margin-bottom: 25px;
+		margin-top: 5px;
+
+		span {
+			font-weight: 900;
+		}
+	}
+
+	.logos {
+		width: 100%;
+		@include outer-container();
+		@include display(flex);
+		@include justify-content(space-evenly);
+
+		a.logo {
+			@include flex(0 0 215px);
+			width: 215px;
+			height: 80px;
+			border-radius: 20px;
+			display: inline-block;
+			background: #fff;
+			border: 1px solid #999;
+			@include display(flex);
+			@include align-items(center);
+			@include justify-content(center);
+
+			img {
+				max-width: 200px;
+				max-height: 70px;
+				margin: 0 auto;
+			}
+		}
+
+		.slick-list {
+			text-align: center;
+		}
+
+		ul.slick-dots {
+			@include display(flex);
+			@include justify-content(center);
+			margin: 0 auto;
+			list-style-type: none;
+			padding-left: 0;
+			position: absolute;
+			bottom: -40px;
+			left: calc(50% - 132px);
+
+			li {
+				margin: 0 0.25rem;
+				padding-left:1px;
+				padding-right:1px;
+			}
+		}
+
+		button {
+			display: block;
+			width: 10px;
+			height: 10px;
+			padding: 0;
+			border: none;
+			border-radius: 100%;
+			background: #999;
+			text-indent: -9999px;
+		}
+
+		li.slick-active button {
+			background: #000;
+		}
+	}
+
+	button.next {
+		border: none;
+		-webkit-appearance: none;
+		 border: none;
+	    -webkit-appearance: none;
+	    position: absolute;
+	    left: -150px;
+	    top: 0;
+		padding: 0;
+		@include general-transition();
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background: none;
+		}
+
+		@media screen and (max-width: 1550px) {
+			left: -70px;
+		}
+
+		@media screen and (max-width: 1350px) {
+			display: none!important;
+		}
+	}
+
+	button.prev {
+		border: none;
+		-webkit-appearance: none;
+		 border: none;
+	    -webkit-appearance: none;
+	    position: absolute;
+	    right: -150px;
+	    top: 0;
+	    padding: 0;
+	    @include general-transition();
+
+	    &:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background: none;
+		}
+
+		@media screen and (max-width: 1550px) {
+			right: -70px;
+		}
+
+		@media screen and (max-width: 1350px) {
+			display: none!important;
+		}
+	}
+
+
+	.slick-dots {
+		@include display(flex);
+		@include justify-content(center);
+		margin: 0;
+		padding: 1rem 0;
+		list-style-type: none;
+		position: absolute;
+		bottom: -86px;
+		left: calc(50% - 40px);
+
+		li {
+			margin: 0 0.45rem;
+		}
+
+		button {
+			display: block;
+			width: 13px;
+			height: 13px;
+			padding: 0;
+			border: 1px solid #666;
+			border-radius: 100%;
+			background-color: #fff;
+			text-indent: -9999px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		li.slick-active button {
+			background-color: #000;
 		}
 	}
 }
 
 #about {
 	margin: 0 2% 60px 2%;
-	background-size: cover;
 	width: 96%;
 	max-width: 1600px;
 	padding: 5%;
-	background: url('/hamilton/wp-content/themes/hamilton/assets/images/wood.jpg') center center no-repeat;
+	background: url('/hamilton/wp-content/themes/hamilton/assets/images/wood.jpg') top center no-repeat;
+	background-size: cover;
+
+	@media screen and (max-width: 1190px) {
+		padding: 10% 4%;
+	}
 
 	.about-container {
 		@include outer-container();
 		@include display(flex);
 		@include justify-content(space-between);
+		@include flex-wrap(wrap);
 
 		@include media($laptopL) {
-			margin-left: 4%;
-			margin-right: 4%;
+			margin-left: 3%;
+			margin-right: 3%;
 			transition: all .2 ease;
 		}
 
 		.wheat {
-			@include flex(0 1 31%);
+			@include flex(0 0 340px);
 			height: 200px;
 			color: white;
 			@include display(flex);
 			@include justify-content(space-between);
+
+			@media screen and (max-width: 1190px) {
+				@include justify-content(flex-start);
+			}
 
 			img {
 			}
@@ -67,7 +254,7 @@
 
 				h3 {
 					color: #fff;
-					font-size: 2.8em;
+					font-size: 40px;
 					font-weight: 300;
 					font-family: $poppins;
 					line-height: .9;
@@ -78,15 +265,119 @@
 						font-weight: 900;
 					}
 				}
+
+				a.button {
+					display: inline-block;
+					margin-top: 10px;
+				}
 			}
 		}
 
 		p {
 			@include flex(0 1 30%);
-			height: 200px;
+			min-height: 200px;
 			color: #fff;
 			margin-top: 0;
+			padding-left: 1%;
+			padding-right: 1%;
+
+			@media screen and (max-width: 1190px) {
+				min-height: 0;
+			}
+
+		//	&:last-of-type {
+		//
+		//		@media screen and (max-width: 1190px) {
+		//			clear: both;
+		//			@include flex(0 0 100%);
+		//		}
+		//	}
+
+			@media screen and (max-width: 980px) {
+				@include flex(0 0 100%);clear: both;
+			}
 		}
 	}
 }
+
+#getintouch {
+	margin: 160px auto 60px auto;
+	width: 96%;
+	max-width: 768px;
+	text-align: center;
+
+	@media screen and (max-width: 800px) {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	h3 {
+		color: #000;
+		font-size: 40px;
+		font-weight: 300;
+		font-family: $poppins;
+		line-height: .9;
+		margin-bottom: 0;
+		margin-top: 5px;
+
+		span {
+			font-weight: 900;
+		}
+	}
+
+	input,
+	.ginput_container_textarea {
+		border: none;
+		border-bottom: 1px solid #000;
+		background: #fff;
+		border-radius: 0;
+		padding: 0;
+
+
+	}
+
+	.gform_body {
+		@media screen and (max-width: 720px) {
+			width: 94%;
+		}
+	}
+
+	.gform_wrapper textarea {
+		padding: 0!important;
+
+		&:focus {
+			outline: none;
+			border: none;
+		}
+	}
+
+	textarea.medium {
+		background: none;
+		height: 80px;
+	}
+
+	input[type=submit] {
+		background: #fff;
+		color: #000;
+		padding: 7px 3.3em;
+		border-radius: 30px;
+		border: 1.5px solid $red;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 300;
+		width: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		@include general-transition();
+
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+}
+
+
+
 

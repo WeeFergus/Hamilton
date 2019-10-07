@@ -1,11 +1,12 @@
 #{$all-buttons},
+
 button,
 .button {
 	background: $red;
 	color: #fff;
-	padding: 7px 1.3em;
+	padding: 12px 2.3em;
 	border-radius: 30px;
-	border: 1.5px solid #fff;
+	border: 1.5px solid $red;
 	margin-left: 5px;
 	margin-right: 5px;
 	font-size: 14px;

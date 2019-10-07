@@ -1,5 +1,5 @@
 #browse-products {
-	margin: 0 2%;
+	margin: 0 2% 2% 2%;
 	background-size: cover;
 	background-position: center center;
 	width: 96%;
@@ -31,6 +31,10 @@
 
     .text-wrap {
 		@include flex(0 1 500px);
+
+		@include media($laptop) {
+			@include flex (0 0 370px);
+		}
 
 	    h3 {
 			color: #000;

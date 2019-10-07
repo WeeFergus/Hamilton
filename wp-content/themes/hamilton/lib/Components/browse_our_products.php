@@ -10,7 +10,7 @@ class browse_our_products
 
 	echo '<div id="browse-products" style="background-image: url(' . $bkgndImg . ')">';
 		echo '<h3>' . get_field('callout_title', 'options') . '</h3>';
-		echo '<a href="/shop/" class="button">';
+		echo '<a href="/hamilton/shop/" class="button">';
 			echo the_field('button_text', 'options');
 		echo '</a>';
 	echo '</div>';
