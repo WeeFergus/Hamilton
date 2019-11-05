@@ -1,0 +1,30 @@
+//Hot Deals
+
+section.hot-deals {
+	min-height: 400px;
+
+	p {
+		margin-bottom: 50px;
+	}
+
+	.hot-deal {
+		@include display(flex);
+		@include justify-content(flex-start);
+		@include flex-wrap(wrap);
+		margin-bottom: 40px;
+
+		a {
+			@include flex(0 0 100px);
+		}
+
+		h3 {
+			@include flex(0 0 auto);
+		}
+	}
+
+	a.login {
+		text-decoration: underline;
+		color: $red;
+	}
+}
+
