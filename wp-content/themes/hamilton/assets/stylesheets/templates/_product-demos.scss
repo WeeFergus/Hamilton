@@ -1,18 +1,45 @@
 section.demos {
 	@include display(flex);
-	@include justify-content(space-between);
+	@include justify-content(flex-start);
 	@include flex-wrap(wrap);
+	border-bottom: 1px solid #000;
+	padding-bottom: 60px;
+	margin-bottom: 60px;
 
 	.video-title-wrap {
 		@include flex(0 0 31%);
 		transition: all .2 ease;
+		margin-bottom: 30px;
+		margin-right: 3.5%;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
 
 		@include media($tablet) {
 			@include flex(0 0 48%);
+			margin-right: 2%;
+
+			&:nth-child(3n) {
+				margin-right: 2%;
+			}
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
 		}
 
-		@include media($mobileS) {
+		@media screen and (max-width: 480px) {
 			@include flex(0 0 100%);
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+
 		}
 
 		.embed-container {
@@ -35,3 +62,12 @@ section.demos {
 	}
 }
 
+p.closing {
+	text-align: center;
+	@include outer-container();
+	margin-bottom: 50px;
+
+	@include media($laptop) {
+		margin: 0 4%;
+	}
+}

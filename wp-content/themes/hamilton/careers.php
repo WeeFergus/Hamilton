@@ -18,6 +18,8 @@ function haminc_page_title() {
 
 function haminc_do_career_loop() {
 echo '<section class="careers">';
+echo '<p>' . get_field('intro_text') . '</p>';
+
 	$args = array(
 		 'post_type' => 'job_postings',
 		 'posts_per_page' => '-1'

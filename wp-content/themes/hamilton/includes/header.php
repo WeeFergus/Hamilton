@@ -30,6 +30,7 @@ function haminc_superheader() { ?>
 				<i class="far fa-clock"></i> <span><?php the_field('hours','options')?></span>
 			</div>
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+			<ul class="cart"><?php echo do_shortcode("[woo_cart_but]"); ?></ul>
 		</div>
 	</div>
 <?php
@@ -49,6 +50,9 @@ function haminc_logo_nav() { ?>
 				<span></span>
 				<span></span>
 				<span></span>
+			</div>
+			<div class="mobile-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
 			</div>
 		</div>
 

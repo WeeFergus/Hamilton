@@ -1,14 +1,39 @@
 jQuery( document ).ready(function() {
 
 	jQuery('.logos').slick({
-		prevArrow:"<button type='button' class='slick-prev prev'><img src='http://www.petehudack.com/hamilton/wp-content/themes/hamilton/assets/images/arrow-left.jpg'></button>",
-        nextArrow:"<button type='button' class='slick-next next'><img src='http://www.petehudack.com/hamilton/wp-content/themes/hamilton/assets/images/arrow-right.jpg'></button>",
 		dots: true,
-		slidesToShow: 4,
-		autoplay: false,
-		arrows: true,
-		draggable: true,
 		infinite: true,
-		initialSlide: 1
+		speed: 400,
+		autoplay: false,
+		slidesToShow: 5,
+		slidesToScoll: 5,
+		centerMode: false,
+		variableWidth: false,
+		draggable: true,
+		swipe: true,
+		arrows: false,
+		responsive: [
+			{
+			breakpoint: 1100,
+			settings: {
+				slidesToShow: 4,
+				slidesToScoll: 4,
+      			}
+	  		},
+	  		{
+			breakpoint: 900,
+			settings: {
+				slidesToShow: 3,
+				slidesToScoll: 3,
+      			}
+	  		},
+	  		{
+			breakpoint: 500,
+			settings: {
+				slidesToShow: 2,
+				slidesToScoll: 2,
+      			}
+	  		},
+	  	]
 	});
  });

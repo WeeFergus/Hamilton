@@ -2,9 +2,15 @@
 	margin: 0 2% 2% 2%;
 	background-size: cover;
 	background-position: center center;
+	background-repeat: no-repeat;
 	width: 96%;
     padding: 18% 4%;
     max-width: 1600px;
+    clear: both;
+
+    @include media($tablet) {
+		display: none;
+	}
 
     h3 {
 		color: #fff;
@@ -19,15 +25,49 @@
 	}
 }
 
+#browse-products-mobile {
+	display: none;
+	margin: 0 2% 6% 2%;
+	text-align: center;
+
+	@include media($tablet) {
+		display: block;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	h3 {
+		color: #000;
+		font-size: 40px;
+		font-weight: 300;
+		font-family: $poppins;
+		line-height: .9;
+		margin-bottom: 23px;
+		margin-top: 15px;
+
+		span {
+			font-weight: 900;
+		}
+	}
+}
+
 #view-demos {
 	margin: 60px 2% 30px 2%;
 	background-size: cover;
 	background-position: center center;
+	background-repeat: no-repeat;
 	width: 96%;
     @include display(flex);
     @include justify-content(flex-end);
     padding: 13% 4%;
     max-width: 1600px;
+
+    @include media($tablet) {
+		display: none;
+	}
 
     .text-wrap {
 		@include flex(0 1 500px);
@@ -47,6 +87,34 @@
 			span {
 				font-weight: 900;
 			}
+		}
+	}
+}
+
+#view-demos-mobile {
+	display: none;
+	margin: 0 2% 6% 2%;
+	text-align: center;
+
+	@include media($tablet) {
+		display: block;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	h3 {
+		color: #000;
+		font-size: 40px;
+		font-weight: 300;
+		font-family: $poppins;
+		line-height: .9;
+		margin-bottom: 0;
+
+		span {
+			font-weight: 900;
 		}
 	}
 }

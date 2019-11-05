@@ -39,6 +39,22 @@ function haminc_do_conact_form() { ?>
 			Toll-Free: <?php the_field('va_toll_free','options');?><br />
 			Fax: <?php the_field('va_fax','options');?><br />
 			</p>
+			<?php
+				$dealer_file = get_field('dealer_application');
+				if( $dealer_file ): ?>
+				<p>&nbsp;</p>
+				<p><strong>DEALER CREDIT APPLICATION</strong><br />
+				<a target="_blank" href="<?php echo $dealer_file['url']; ?>">Click here </a>to download a Credit Application for Machinery purchases.
+				<?php endif; ?>
+			</p>
+			<?php
+				$reps_file = get_field('sales_reps');
+				if( $reps_file ): ?>
+				<p>&nbsp;</p>
+				<p><strong>SALES REPRESENTATIVES</strong><br />
+				<a target="_blank" href="<?php echo $reps_file['url']; ?>">Click here</a> to contact our Sales Representatives.
+				<?php endif; ?>
+			</p>
 		</div>
 	</section><?php
 }

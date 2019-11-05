@@ -7,10 +7,24 @@ section.contact {
 
 	.form {
 		@include flex(0 1 70%);
+
+		@include media($tablet) {
+			@include flex(0 0 100%);
+		}
 	}
 
 	.side {
 		@include flex(0 0 25%);
+		margin-bottom: 50px;
+
+		@include media($tablet) {
+			@include flex(0 0 100%);
+		}
+
+		a {
+			color: $red;
+			text-decoration: underline;
+		}
 	}
 }
 

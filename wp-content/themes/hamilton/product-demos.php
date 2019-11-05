@@ -1,6 +1,9 @@
 <?php
 /* Template Name: Product Demos */
 
+use Tower\Components\browse_our_products;
+add_action('genesis_before_footer', [browse_our_products::class,'browse_our_products']);
+
 remove_action( 'genesis_entry_header', 'genesis_do_post_section_title' );
 remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 remove_action('genesis_loop', 'genesis_do_loop');
@@ -29,6 +32,8 @@ function haminc_demos() {
 		    endwhile;
 		else :
 		endif;
+
 	echo '</section>';
+	echo '<p class="closing">' . get_field('closing_content') . '</p>';
 }
 genesis();

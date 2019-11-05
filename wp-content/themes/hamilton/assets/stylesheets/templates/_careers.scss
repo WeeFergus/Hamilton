@@ -12,6 +12,7 @@ section.careers {
 		padding: 3%;
 		text-align: left;
 		margin-bottom: 40px;
+		border: 1px dashed #000;
 
 		@include media($tablet) {
 			@include flex(0 0 100%);

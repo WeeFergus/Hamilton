@@ -6,14 +6,27 @@ section.about {
 
 	.left {
 		@include flex(0 1 65%);
+
+		@media screen and (max-width: 640px) {
+			@include flex(0 0 100%);
+		}
 	}
 
 	.right {
 		@include flex(0 0 30%);
 
+		@media screen and (max-width: 640px) {
+			@include flex(0 0 100%);
+		}
+
 		img {
 			margin: 10px;
 			border: 1px solid #999;
+		}
+
+		@media screen and (max-width: 640px) {
+			float: left;
+			display: inline-block;
 		}
 	}
 }

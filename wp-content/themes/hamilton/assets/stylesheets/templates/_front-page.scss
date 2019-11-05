@@ -38,11 +38,203 @@
 	}
 }
 
+#categories {
+	margin:150px 2%;
+	transition: all .2 ease;
+	@include display(flex);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+
+	@media screen and (max-width: 580px) {
+		margin-top: 0;
+	}
+
+	.half {
+		@include flex(0 1 49.5%);
+		height: 315px;
+		margin-bottom: 1%;
+		@include display(flex);
+		@include flex-direction(column);
+		@include justify-content(center);
+		@include align-items(center);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 10;
+
+
+		@include media($tablet) {
+			@include flex( 0 0 49%);
+		}
+
+		@media screen and (max-width: 580px) {
+			@include flex( 0 0 100%);
+		}
+
+		&:after {
+			background: rgba(0,0,0,0.3);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			content: '';
+		}
+
+		&.blank {
+			@include align-items(flex-end);
+			padding-right: 2%;
+
+			@media screen and (max-width: 580px) {
+				@include align-items(center);
+			}
+
+			&:after {
+				background: none;
+			}
+
+			&:hover {
+
+				&:after {
+					background: none;
+				}
+			}
+
+		}
+
+		&:hover {
+
+			& > h3 {
+				font-size: 22px;
+				@include general-transition();
+			}
+
+			&:after {
+				background: rgba(0,0,0,0.7);
+			}
+		}
+
+		h2 {
+			text-align: right;
+			font-weight: 100;
+			text-transform: uppercase;
+			color: #000;
+			line-height: 1;
+			margin-bottom: -5px;
+
+			span {
+				font-weight: 700;
+				display: block;
+			}
+
+			@media screen and (max-width: 580px) {
+				text-align: center;
+			}
+		}
+
+		p {
+			text-align: right;
+			max-width: 600px;
+
+			@media screen and (max-width: 580px) {
+				text-align: center;
+			}
+		}
+
+		h3 {
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			max-width: 280px;
+			text-transform: uppercase;
+			font-weight: bold;
+			z-index: 20;
+		}
+	}
+
+	.quarter {
+		@include flex(0 0 24.3%);
+		height: 315px;
+		margin-bottom: 1%;
+		@include display(flex);
+		@include flex-direction(column);
+		@include justify-content(center);
+		@include align-items(center);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 10;
+
+		@include media($tablet) {
+			@include flex( 0 0 49%);
+		}
+
+		@media screen and (max-width: 580px) {
+			@include flex( 0 0 100%);
+		}
+
+		&:after {
+			background: rgba(0,0,0,0.3);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			content: '';
+			@include general-transition();
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			& > h3 {
+				font-size: 22px;
+				@include general-transition();
+			}
+
+			&:after {
+				background: rgba(0,0,0,0.7);
+			}
+		}
+
+		&.blank {
+
+			&:after {
+				background: none;
+			}
+
+			&:hover {
+				cursor: auto;
+
+				&:after {
+					background: none;
+				}
+			}
+
+			@include media($tablet) {
+				display: none;
+			}
+		}
+
+		h3 {
+			color: #fff;
+			font-size: 18px;
+			text-align: center;
+			max-width: 240px;
+			text-transform: uppercase;
+			font-weight: bold;
+			z-index: 20;
+		}
+	}
+}
+
 #partners {
 	margin: 100px auto 160px auto;
-	width: 96%;
-	max-width: 1000px;
-	text-align: center;
+    width: 96%;
+    max-width: 1076px;
+    text-align: center;
 
 	h3 {
 		color: #000;
@@ -61,20 +253,24 @@
 	.logos {
 		width: 100%;
 		@include outer-container();
-		@include display(flex);
-		@include justify-content(space-evenly);
 
 		a.logo {
-			@include flex(0 0 215px);
-			width: 215px;
-			height: 80px;
+			width: 180px;
+			height: 90px;
+			display: block;
 			border-radius: 20px;
 			display: inline-block;
 			background: #fff;
-			border: 1px solid #999;
-			@include display(flex);
-			@include align-items(center);
-			@include justify-content(center);
+			text-align: center;
+//			@include display(flex);
+//			@include align-items(center);
+//			@include justify-content(center);
+//			-webkit-box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.63);
+//			-moz-box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.63);
+//			box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.63);
+		//	background: url('/hamilton/wp-content/themes/hamilton/assets/images/logo-bkgnd.jpg') center center no-repeat;
+		//	background-size: cover;
+		//	padding-top: 9px;
 
 			img {
 				max-width: 200px;
@@ -83,8 +279,19 @@
 			}
 		}
 
+		.slick-slide {
+			margin-left:5px;
+			margin-right: 5px;
+		}
+
+		.slick-list [data-slick-index="0"] {
+//			margin-left: 0;
+  		}
+
 		.slick-list {
 			text-align: center;
+			padding-top: 20px;
+			height: 120px;
 		}
 
 		ul.slick-dots {
@@ -95,7 +302,7 @@
 			padding-left: 0;
 			position: absolute;
 			bottom: -40px;
-			left: calc(50% - 132px);
+			left: calc(50% - 90px);
 
 			li {
 				margin: 0 0.25rem;
